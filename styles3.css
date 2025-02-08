@@ -1,0 +1,95 @@
+/* Estilos generales para el header */
+header {
+    display: flex; /* Usa flexbox para alinear el logo y el nav */
+    justify-content: space-between; /* Separa el logo y el nav a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #f8f8f8; /* Color de fondo del header */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+
+/* Estilos para el contenedor del logo */
+.logo img {
+    height: 50px; /* Altura del logo (ajusta según necesites) */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinear los elementos del nav */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaciado entre los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: black; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+
+
+
+/* Estilos generales para la sección */
+.quienes-somos {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.quienes-somos h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Estilos para el grid de perfiles */
+.grid-perfiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.perfil {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.perfil .detalles {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: #fff;
+    padding: 20px;
+    transition: bottom 0.3s ease;
+}
+
+.perfil:hover img {
+    transform: scale(1.1);
+}
+
+.perfil:hover .detalles {
+    bottom: 0;
+}
